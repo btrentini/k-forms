@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kgrams"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "torch",
+    "numpy",
+    "sklearn",
+    "matplotlib",
+]
+authors = [
+    {name = "Philipp Misof"},
+    {name = "Bruno Trentini"},
+]
+description = "Neural k-forms for point cloud processing"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "tests", "src",
+]
+filterwarnings = [
+]
